@@ -1,0 +1,26 @@
+https://bootstrapmade.com/demo/Strive/
+	- General structure
+	- Services leads to other links
+
+
+http://bootstrapmade.com/demo/EasyFolio/
+	- [Section]: About
+	- [Section]: Resume
+	- [Section]: Testimonials
+	- [Section]: Footer
+
+
+https://bootstrapmade.com/demo/Devin/
+	- [Section]: Testimonials
+
+
+-- Hero
+-- About
+
+-- Resume
+
+-- Portfolio (+ Experiences, Projects)
+-- Testimonials
+-- Partner logos (tag Clients)
+-- Contacts
+-- Footer
