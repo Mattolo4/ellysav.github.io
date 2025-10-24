@@ -14,13 +14,27 @@ https://bootstrapmade.com/demo/Devin/
 	- [Section]: Testimonials
 
 
+
+CORE: 
 -- Hero
 -- About
-
 -- Resume
-
 -- Portfolio (+ Experiences, Projects)
 -- Testimonials
 -- Partner logos (tag Clients)
 -- Contacts
 -- Footer
+
+
+EDITS:
+Primer color = #0b429c  -->   --accent-color: #0b429c
+Secondary color = #072352 
+Bottom background color = #7facf5 
+add ondinde
+logo 
+background color sections
+eliminare get in touch
+about img fix
+
+
+#5b5b5b  --> #072352  
