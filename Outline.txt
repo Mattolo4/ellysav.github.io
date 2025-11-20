@@ -26,15 +26,14 @@ CORE:
 -- Footer
 
 
-EDITS:
+EDITS TODO:
+Refine colors:
 Primer color = #0b429c  -->   --accent-color: #0b429c
 Secondary color = #072352 
 Bottom background color = #7facf5 
-add ondinde
+	#5b5b5b  --> #072352  
+make better ondinde
 logo 
-background color sections
-eliminare get in touch
-about img fix
+fix image size: when screen size get small the pic doesnt resize dynamically
 
 
-#5b5b5b  --> #072352  
