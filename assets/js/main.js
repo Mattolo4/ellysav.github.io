@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6d244d (Upload:)
 /**
 * Template Name: Strive
 * Template URL: https://bootstrapmade.com/strive-bootstrap-business-template/
@@ -6,7 +10,11 @@
 * License: https://bootstrapmade.com/license/
 */
 
+<<<<<<< HEAD
 (function() {
+=======
+(function () {
+>>>>>>> c6d244d (Upload:)
   "use strict";
 
   /**
@@ -52,7 +60,11 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+<<<<<<< HEAD
     navmenu.addEventListener('click', function(e) {
+=======
+    navmenu.addEventListener('click', function (e) {
+>>>>>>> c6d244d (Upload:)
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -108,7 +120,11 @@
    * Init swiper sliders
    */
   function initSwiper() {
+<<<<<<< HEAD
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+=======
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
+>>>>>>> c6d244d (Upload:)
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -131,13 +147,21 @@
   /**
    * Init isotope layout and filters
    */
+<<<<<<< HEAD
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+=======
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
+>>>>>>> c6d244d (Upload:)
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
+<<<<<<< HEAD
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+=======
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
+>>>>>>> c6d244d (Upload:)
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -146,8 +170,13 @@
       });
     });
 
+<<<<<<< HEAD
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
+=======
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
+>>>>>>> c6d244d (Upload:)
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -180,7 +209,11 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
+<<<<<<< HEAD
   window.addEventListener('load', function(e) {
+=======
+  window.addEventListener('load', function (e) {
+>>>>>>> c6d244d (Upload:)
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -216,5 +249,34 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+<<<<<<< HEAD
 
 })();
+=======
+  /**
+   * Init Typed.js typing effect for elements with class `typed`.
+   * Expects a `data-typed-items` attribute with comma-separated phrases.
+   */
+  function initTyped() {
+    if (typeof Typed === 'undefined') return;
+    document.querySelectorAll('.typed').forEach(function (el) {
+      const itemsAttr = el.getAttribute('data-typed-items');
+      if (!itemsAttr) return;
+      const strings = itemsAttr.split(',').map(s => s.trim()).filter(Boolean);
+      if (strings.length === 0) return;
+      new Typed(el, {
+        strings: strings,
+        typeSpeed: 60,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    });
+  }
+
+  window.addEventListener('load', initTyped);
+
+})();
+>>>>>>> c6d244d (Upload:)

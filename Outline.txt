@@ -14,13 +14,37 @@ https://bootstrapmade.com/demo/Devin/
 	- [Section]: Testimonials
 
 
+<<<<<<< HEAD
 -- Hero
 -- About
 
 -- Resume
 
+=======
+
+CORE: 
+-- Hero
+-- About
+-- Resume
+>>>>>>> c6d244d (Upload:)
 -- Portfolio (+ Experiences, Projects)
 -- Testimonials
 -- Partner logos (tag Clients)
 -- Contacts
 -- Footer
+<<<<<<< HEAD
+=======
+
+
+EDITS TODO:
+Refine colors:
+Primer color = #0b429c  -->   --accent-color: #0b429c
+Secondary color = #072352 
+Bottom background color = #7facf5 
+	#5b5b5b  --> #072352  
+make better ondinde
+logo 
+fix image size: when screen size get small the pic doesnt resize dynamically
+
+
+>>>>>>> c6d244d (Upload:)

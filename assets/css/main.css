@@ -14,6 +14,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
+<<<<<<< HEAD
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito",  sans-serif;
   --nav-font: "Ubuntu",  sans-serif;
@@ -27,16 +28,52 @@
   --accent-color: #ea7c00; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+=======
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Ubuntu", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: # #072352;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #282828;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0b429c;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+>>>>>>> c6d244d (Upload:)
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
+<<<<<<< HEAD
   --nav-color: #5b5b5b;  /* The default color of the main navmenu links */
   --nav-hover-color: #ea7c00; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ea7c00; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+=======
+  --nav-color: #072352;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #0b429c;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: # #072352;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0b429c;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+>>>>>>> c6d244d (Upload:)
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -217,7 +254,11 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
+<<<<<<< HEAD
   --background-color: #5b5b5b;
+=======
+  --background-color: #072352;
+>>>>>>> c6d244d (Upload:)
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --nav-color: #ffffff;
@@ -234,7 +275,11 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
+<<<<<<< HEAD
   --background-color: #5b5b5b;
+=======
+  --background-color: #072352;
+>>>>>>> c6d244d (Upload:)
   --nav-color: #ffffff;
 }
 
@@ -494,8 +539,80 @@ h6 {
     transition: 0.3s;
   }
 
+<<<<<<< HEAD
   .mobile-nav-active .navmenu>ul {
     display: block;
+=======
+  /* Make the mobile menu panel itself scrollable and fully visible
+     Ensure the items are readable on the dark overlay and the list
+     takes the viewport height minus header area. */
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+    position: fixed;
+    inset: 80px 18px 20px 18px;
+    /* leave space for header and small side gutters */
+    background: transparent;
+    /* keep overlay visible behind the list */
+    z-index: 10001;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 0;
+  }
+
+  /* Center the text in each mobile nav row and add spacing */
+  .mobile-nav-active .navmenu>ul li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
+
+  .mobile-nav-active .navmenu a,
+  .mobile-nav-active .navmenu a:focus {
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* center text horizontally */
+    text-align: center;
+  }
+
+  /* Hide the small icon circle on mobile rows to keep the label centered */
+  .mobile-nav-active .navmenu a i {
+    display: none;
+  }
+
+  /* Active / hovered row style so the selected row stands out */
+  .mobile-nav-active .navmenu a.active,
+  .mobile-nav-active .navmenu a:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(11, 66, 156, 0.18);
+  }
+
+  /* Ensure dropdowns expand as blocks and their items are centered too */
+  .mobile-nav-active .navmenu .dropdown ul,
+  .mobile-nav-active .navmenu .dropdown>.dropdown-active {
+    display: block;
+    margin: 8px 0 0 0;
+    padding: 0 12px;
+  }
+
+  /* Make nav links visible on the dark overlay when mobile is active */
+  .mobile-nav-active .navmenu a,
+  .mobile-nav-active .navmenu a:focus {
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Ensure dropdowns also appear correctly on mobile */
+  .mobile-nav-active .navmenu .dropdown>.dropdown-active {
+    display: block;
+>>>>>>> c6d244d (Upload:)
   }
 }
 
@@ -504,6 +621,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
+<<<<<<< HEAD
   background: var(--background-color);
   font-size: 14px;
   padding: 80px 0 0;
@@ -814,6 +932,46 @@ input[type=text]::placeholder,
 input[type=email]::placeholder,
 textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+=======
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+>>>>>>> c6d244d (Upload:)
 }
 
 /*--------------------------------------------------------------
@@ -962,11 +1120,16 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
+<<<<<<< HEAD
+=======
+  text-align: center;
+>>>>>>> c6d244d (Upload:)
   padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
+<<<<<<< HEAD
   font-size: 24px;
   font-weight: 700;
   padding: 0;
@@ -992,6 +1155,47 @@ section,
   font-size: 16px;
   font-weight: 500;
   font-family: var(--heading-font);
+=======
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(120deg, var(--heading-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title .title-shape {
+  width: 200px;
+  height: 20px;
+  margin: 0 auto;
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+
+.section-title .title-shape svg {
+  width: 100%;
+  height: 100%;
+}
+
+.section-title p {
+  margin: 15px auto 0;
+  font-size: 16px;
+  max-width: 700px;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .section-title .subtitle-wrapper .subtitle {
+    font-size: 13px;
+  }
+>>>>>>> c6d244d (Upload:)
 }
 
 /*--------------------------------------------------------------
@@ -1054,6 +1258,19 @@ section,
   font-size: 18px;
 }
 
+<<<<<<< HEAD
+=======
+/* Ensure the typed span in the hero does not get an unwanted underline */
+#hero .info p .typed,
+#hero .info p .typed-cursor {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  color: #fff;
+  /* keep the typed text visible on dark hero */
+}
+
+
+>>>>>>> c6d244d (Upload:)
 .hero .info .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -1157,6 +1374,11 @@ section,
 .hero .carousel-control-next:hover {
   opacity: 0.9;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c6d244d (Upload:)
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1244,7 +1466,10 @@ section,
   margin: 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6d244d (Upload:)
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -1382,6 +1607,333 @@ section,
 }
 
 
+<<<<<<< HEAD
+=======
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+  position: relative;
+  overflow: hidden;
+  /* Swiper Navigation */
+  /* Swiper Pagination */
+  /* Responsive Styles */
+}
+
+.testimonials .testimonial-slider {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.testimonials .testimonial-slider .swiper-wrapper {
+  height: auto !important;
+}
+
+.testimonials .testimonial-item {
+  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--surface-color), var(--accent-color) 2%) 100%);
+  border-radius: 20px;
+  padding: 0;
+  height: 100%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials .testimonial-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.testimonials .testimonial-item:hover {
+  border-color: var(--accent-color);
+}
+
+.testimonials .testimonial-item:hover::before {
+  transform: scaleX(1);
+}
+
+.testimonials .testimonial-item:hover .testimonial-header img {
+  transform: scale(1.05);
+}
+
+.testimonials .testimonial-item:hover .quote-icon {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.testimonials .testimonial-header {
+  position: relative;
+  text-align: center;
+  padding: 30px 30px 20px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--surface-color), var(--accent-color) 3%) 0%, var(--surface-color) 100%);
+}
+
+.testimonials .testimonial-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial-header .rating {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.testimonials .testimonial-header .rating i {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.testimonials .testimonial-body {
+  padding: 0 30px 20px;
+}
+
+.testimonials .testimonial-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+}
+
+.testimonials .testimonial-body p::before,
+.testimonials .testimonial-body p::after {
+  content: '"';
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  opacity: 0.6;
+  font-family: serif;
+  position: absolute;
+}
+
+.testimonials .testimonial-body p::before {
+  top: -5px;
+  left: -10px;
+}
+
+.testimonials .testimonial-body p::after {
+  bottom: -20px;
+  right: -5px;
+}
+
+.testimonials .testimonial-footer {
+  padding: 20px 30px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonials .testimonial-footer h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 0 0 5px;
+}
+
+.testimonials .testimonial-footer span {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  display: block;
+  margin-bottom: 15px;
+}
+
+.testimonials .testimonial-footer .quote-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.testimonials .swiper-navigation {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.testimonials .swiper-button-prev,
+.testimonials .swiper-button-next {
+  position: static;
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  color: var(--contrast-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .swiper-button-prev:hover,
+.testimonials .swiper-button-next:hover {
+  background: color-mix(in srgb, var(--accent-color), var(--heading-color) 20%);
+  transform: scale(1.05);
+}
+
+.testimonials .swiper-button-prev::after,
+.testimonials .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.testimonials .swiper-pagination {
+  position: static;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  opacity: 1;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  transform: scale(1.2);
+}
+
+@media (max-width: 1199px) {
+  .testimonials .testimonial-item .testimonial-header {
+    padding: 25px 25px 15px;
+  }
+
+  .testimonials .testimonial-item .testimonial-header img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonials .testimonial-item .testimonial-body,
+  .testimonials .testimonial-item .testimonial-footer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .testimonials .testimonial-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials .testimonial-item .testimonial-header {
+    padding: 20px 20px 10px;
+  }
+
+  .testimonials .testimonial-item .testimonial-header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonials .testimonial-item .testimonial-header .rating i {
+    font-size: 0.8rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-body {
+    padding: 0 20px 15px;
+  }
+
+  .testimonials .testimonial-item .testimonial-body p {
+    font-size: 0.95rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer {
+    padding: 15px 20px 20px;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer h5 {
+    font-size: 1rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer span {
+    font-size: 0.8rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer .quote-icon {
+    font-size: 1.3rem;
+    bottom: 10px;
+    right: 15px;
+  }
+
+  .testimonials .swiper-button-prev,
+  .testimonials .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .testimonials .swiper-button-prev::after,
+  .testimonials .swiper-button-next::after {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .testimonials .testimonial-slider {
+    padding-bottom: 30px;
+  }
+
+  .testimonials .testimonial-item .testimonial-header {
+    padding: 15px 15px 10px;
+  }
+
+  .testimonials .testimonial-item .testimonial-header img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .testimonials .testimonial-item .testimonial-body {
+    padding: 0 15px 10px;
+  }
+
+  .testimonials .testimonial-item .testimonial-body p {
+    font-size: 0.9rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer {
+    padding: 10px 15px 15px;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer h5 {
+    font-size: 0.95rem;
+  }
+
+  .testimonials .testimonial-item .testimonial-footer .quote-icon {
+    font-size: 1.2rem;
+  }
+
+  .testimonials .swiper-navigation {
+    margin-top: 10px;
+  }
+}
+
+>>>>>>> c6d244d (Upload:)
 
 /*--------------------------------------------------------------
 # Services Section
@@ -2981,8 +3533,16 @@ section,
 
 @media (min-width: 992px) {
   .contact .contact-main-wrapper {
+<<<<<<< HEAD
     grid-template-columns: 45% 55%;
     min-height: 600px;
+=======
+    /* Force single-column layout on large screens so the map sits on its own row
+       and the contact content stacks below it. This makes the map full-width
+       across the container while keeping the contact cards layout unchanged. */
+    grid-template-columns: 1fr;
+    min-height: auto;
+>>>>>>> c6d244d (Upload:)
   }
 }
 
@@ -2995,9 +3555,17 @@ section,
 
 @media (min-width: 992px) {
   .contact .map-wrapper {
+<<<<<<< HEAD
     height: 100%;
     position: sticky;
     top: 100px;
+=======
+    /* Use a taller fixed height on desktop and remove sticky behavior so the
+       map occupies its own row and the contact content flows beneath it. */
+    height: 500px;
+    position: relative;
+    top: 0;
+>>>>>>> c6d244d (Upload:)
   }
 }
 
